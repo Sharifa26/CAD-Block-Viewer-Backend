@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 // Use routes
 app.use("/", routes); // Prefix all routes with /
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 global.dbConnection = db.sequelize;
 

@@ -1,3 +1,4 @@
+// models/block.js
 module.exports = (sequelize, DataTypes) => {
   const Block = sequelize.define(
     "Block",
@@ -11,12 +12,24 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      name: {
+      block_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      coordinates: {
-        type: DataTypes.TEXT,
+      block_type: {
+        type: DataTypes.STRING,
+      },
+      x_coordinate: {
+        type: DataTypes.FLOAT,
+      },
+      y_coordinate: {
+        type: DataTypes.FLOAT,
+      },
+      z_coordinate: {
+        type: DataTypes.FLOAT,
+      },
+      properties: {
+        type: DataTypes.JSON,
       },
       created_at: {
         type: DataTypes.DATE,

@@ -1,3 +1,4 @@
+// models/file.js
 module.exports = (sequelize, DataTypes) => {
   const File = sequelize.define(
     "File",
@@ -7,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
         primaryKey: true,
       },
-      filename: {
+      file_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
