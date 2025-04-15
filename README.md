@@ -88,6 +88,7 @@ DB_POOL_MAX=5
 DB_POOL_MIN=0
 DB_POOL_ACQUIRE=30000
 DB_POOL_IDLE=10000
+FRONT_URL =http://localhost:3000  
 ```
 
 <h3>Starting</h3>

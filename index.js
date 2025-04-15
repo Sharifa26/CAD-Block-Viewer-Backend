@@ -5,8 +5,17 @@ const db = require("./models/sequelize");
 const routes = require("./routes/url"); // Make sure this file exports your route handlers
 require("dotenv").config();
 
+// CORS Options
+const corsOptions = {
+  origin: process.env.FRONT_URL, // Allow your frontend domain
+  methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"], // Allowed methods
+  allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+  credentials: true, // Allow cookies or credentials to be sent
+  optionsSuccessStatus: 200, // Success status for OPTIONS request
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
