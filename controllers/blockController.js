@@ -7,7 +7,7 @@ const {
 // Get paginated list of blocks
 const getBlocks = async (req, res) => {
   try {
-    const limit = parseInt(req.query.limit) || 10;
+    const limit = parseInt(req.query.limit) || 100;
     const offset = parseInt(req.query.offset) || 0;
     const result = await getPaginatedBlocks(limit, offset);
     res.json(result);

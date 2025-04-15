@@ -2,7 +2,7 @@ const db = require("../models/sequelize");
 const { Op } = require("sequelize");
 
 // Get paginated list of blocks
-const getPaginatedBlocks = async (limit = 10, offset = 0) => {
+const getPaginatedBlocks = async (limit = 100, offset = 0) => {
   return db.Block.findAndCountAll({
     limit,
     offset,
