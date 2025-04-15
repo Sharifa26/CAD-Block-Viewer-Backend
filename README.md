@@ -5,6 +5,7 @@
  <a href="#dependencies">Dependencies</a> •
  <a href="#started">Getting Started</a> • 
 <a href="#routes">API Endpoints</a> •
+<a href="#unit-tests">Unit Tests</a> •
  <a href="#contribute">Contribute</a>
 </p>
 
@@ -88,6 +89,8 @@ DB_POOL_MIN=0
 DB_POOL_ACQUIRE=30000
 DB_POOL_IDLE=10000
 FRONT_URL =http://localhost:3000  
+NODE_ENV="development"
+
 ```
 
 <h3>Starting</h3>
@@ -143,6 +146,37 @@ curl --location 'localhost:4000/blocks/57'
 ```bash
 curl --location 'localhost:4000/blocks/search/A8'
 ```
+
+<h2 id="unit-tests">🧪 Unit Testing</h2>
+
+<p>To run the unit tests, follow these steps:</p>
+
+<h3>.env.test setup</h3>
+
+```bash
+PORT = 2000
+DB_HOST = YOUR_DB_HOST
+DB_USER = YOUR_DB_USER
+DB_PASSWORD = YOUR_DB_PASSWORD  
+DB_NAME = YOUR_DB_NAME
+DB_PORT=5432
+DB_POOL_MAX=5
+DB_POOL_MIN=0
+DB_POOL_ACQUIRE=30000
+DB_POOL_IDLE=10000
+FRONT_URL =http://localhost:3000  
+NODE_ENV="test"
+```
+
+<h3>Running tests</h3>
+
+```bash
+npm test  # run all tests
+```
+<p>1)Here is an example of a unit test for the `upload` function</p>
+<p>2)Here is an example of a unit test for the `getBlocks` function</p>
+<p>3)Here is an example of a unit test for the `getBlocksById` function</p>
+
 
 <h2 id="contribute">📫 Contribute</h2>
 

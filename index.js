@@ -26,6 +26,11 @@ const PORT = process.env.PORT || 4000;
 
 global.dbConnection = db.sequelize;
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running on port ${PORT}`);
-});
+if (process.env.NODE_ENV === "development") {
+  app.listen(PORT, () => {
+    console.log(`🚀 Server is running on port ${PORT}`);
+  });
+}
+
+
+module.exports = app;
